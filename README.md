@@ -1,3 +1,3 @@
-
+![alt text](https://github.com/FarahNajib/FarahNajib.git/img/f2.png)
  🌱 I’m currently learning ...
 
