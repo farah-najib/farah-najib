@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Farah Najib</h1>
-🌱 I’m currently learning **Javascript,Node.js,React.js**
+🌱 I’m currently learning Javascript,Node.js,React.js
 
 
 
