@@ -1,4 +1,5 @@
 <h1 align="center">Hi 👋, I'm Farah Najib</h1>
+Web Developer with a passion for coding & learning new things 
 🌱 I’m currently learning React.js
 
 
