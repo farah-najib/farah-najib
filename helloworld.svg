@@ -1,0 +1,71 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="600" height="200" viewBox="0 0 600 200">
+  <defs>
+    <!-- Gradient using your new colors -->
+    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#696FC7" />
+      <stop offset="33%" stop-color="#A7AAE1" />
+      <stop offset="66%" stop-color="#F5D3C4" />
+      <stop offset="100%" stop-color="#F2AEBB" />
+    </linearGradient>
+
+    <style>
+      text {
+        font-family: 'Poppins', sans-serif;
+        font-size: 48px;
+        font-weight: bold;
+        fill: url(#gradient);
+        text-anchor: middle;
+        dominant-baseline: middle;
+        filter: drop-shadow(0 0 8px #A7AAE1)
+                drop-shadow(0 0 16px #F5D3C4)
+                drop-shadow(0 0 24px #F2AEBB);
+        overflow: hidden;
+        white-space: nowrap;
+        opacity: 0;
+        animation: typing 3s steps(12) forwards, glow 2s ease-in-out infinite alternate;
+      }
+
+      @keyframes typing {
+        0% {
+          clip-path: inset(0 100% 0 0);
+          opacity: 1;
+        }
+        100% {
+          clip-path: inset(0 0 0 0);
+          opacity: 1;
+        }
+      }
+
+      @keyframes glow {
+        from {
+          filter: drop-shadow(0 0 6px #A7AAE1)
+                  drop-shadow(0 0 10px #F5D3C4);
+        }
+        to {
+          filter: drop-shadow(0 0 20px #F5D3C4)
+                  drop-shadow(0 0 30px #F2AEBB);
+        }
+      }
+
+      .cursor {
+        font-family: monospace;
+        font-size: 48px;
+        fill: url(#gradient);
+        animation: blink 0.8s infinite;
+      }
+
+      @keyframes blink {
+        50% { opacity: 0; }
+      }
+    </style>
+  </defs>
+
+  <!-- Soft background using your first color -->
+  <rect width="100%" height="100%" fill="#696FC7" opacity="0.1"/>
+
+  <!-- Typing text -->
+  <text x="300" y="110">Hello World</text>
+
+  <!-- Blinking cursor -->
+  <text x="460" y="110" class="cursor">|</text>
+</svg>
