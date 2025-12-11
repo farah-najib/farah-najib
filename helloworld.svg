@@ -1,69 +1,105 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="600" height="200" viewBox="0 0 600 200">
-  <defs>
-    <!-- Gradient using Twilight Glow -->
-    <linearGradient id="gradient" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#696FC7" />
-      <stop offset="50%" stop-color="#A7AAE1" />
-      <stop offset="100%" stop-color="#F2AEBB" />
-    </linearGradient>
+<svg xmlns="http://www.w3.org/2000/svg" width="900" height="180" viewBox="0 0 900 180" role="img">
+  <style>
+    .bg { fill: #071126; }
+    .window-dots { opacity: 0.95; }
 
-    <style>
-      text {
-        font-family: 'Poppins', sans-serif;
-        font-size: 48px;
-        font-weight: bold;
-        fill: url(#gradient);
-        text-anchor: middle;
-        dominant-baseline: middle;
-        filter: drop-shadow(0 0 8px #A7AAE1)
-                drop-shadow(0 0 16px #F2AEBB);
-        overflow: hidden;
-        white-space: nowrap;
-        opacity: 0;
-        animation: typing 3s steps(12) forwards, glow 2s ease-in-out infinite alternate;
-      }
+    .wrap {
+      font-family: "Roboto Mono", "Courier New", monospace;
+      color: #e6eef8;
+      font-size: 16px;
+      line-height: 1.35;
+      padding: 16px;
+      box-sizing: border-box;
+    }
 
-      @keyframes typing {
-        0% {
-          clip-path: inset(0 100% 0 0);
-          opacity: 1;
-        }
-        100% {
-          clip-path: inset(0 0 0 0);
-          opacity: 1;
-        }
-      }
+    .term {
+      background: rgba(255,255,255,0.02);
+      border-radius: 12px;
+      padding: 12px 16px;
+      width: 820px;
+      height: 140px;
+      box-sizing: border-box;
+      overflow: hidden;
+    }
 
-      @keyframes glow {
-        from {
-          filter: drop-shadow(0 0 6px #A7AAE1)
-                  drop-shadow(0 0 10px #F2AEBB);
-        }
-        to {
-          filter: drop-shadow(0 0 20px #F2AEBB)
-                  drop-shadow(0 0 30px #F2AEBB);
-        }
-      }
+    .prompt {
+      color: #7ef58a;
+      font-weight:700;
+      margin-right:8px;
+      text-shadow: 0 0 6px #7ef58a;
+    }
 
-      .cursor {
-        font-family: monospace;
-        font-size: 48px;
-        fill: url(#gradient);
-        animation: blink 0.8s infinite;
-      }
+    .type {
+      display: inline-block;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: 2px solid rgba(190,230,170,0.95);
+      padding-right: 4px;
+      text-shadow: 0 0 2px #7ef58a;
+    }
 
-      @keyframes blink {
-        50% { opacity: 0; }
-      }
-    </style>
-  </defs>
+    .name {
+      animation: typingName 3s steps(22) forwards;
+    }
 
-  <!-- Soft background -->
-  <rect width="100%" height="100%" fill="#696FC7" opacity="0.1"/>
+    .skills {
+      animation: typingSkills 3s steps(17) forwards;
+      animation-delay: 3.2s;
+    }
 
-  <!-- Typing text -->
-  <text x="300" y="110">Hello World</text>
+ 
 
-  <!-- Blinking cursor -->
-  <text x="460" y="110" class="cursor">|</text>
+    @keyframes typingName {
+      from { width: 0ch; }
+      to { width: 27ch; }
+    }
+
+    @keyframes typingSkills {
+      from { width: 0ch; }
+      to { width: 27ch; }
+    }
+
+  
+
+    /* loop everything */
+    .term-loop {
+      animation: resetLoop 7.5s infinite;
+    }
+
+    @keyframes resetLoop {
+      0%, 45% { }
+      46%, 100% { }
+    }
+
+    @media (max-width: 520px) {
+      .wrap { font-size: 13px; }
+      .term { width: 320px; height: 130px; }
+    }
+  </style>
+
+  <!-- background and window dots -->
+  <rect class="bg" x="0" y="0" width="900" height="180" rx="12" ry="12"/>
+  <circle class="window-dots" cx="20" cy="20" r="6" fill="#ff5f56"/>
+  <circle class="window-dots" cx="40" cy="20" r="6" fill="#ffbd2e"/>
+  <circle class="window-dots" cx="60" cy="20" r="6" fill="#27c93f"/>
+
+  <!-- terminal content -->
+  <foreignObject x="28" y="36" width="844" height="144">
+    <div xmlns="http://www.w3.org/1999/xhtml" class="wrap">
+      <div class="term term-loop" role="document" aria-label="Terminal">
+        <div style="display:flex; align-items:center;">
+          <div class="prompt">farah@host:~$</div>
+          <div><span class="type name">echo "NAME: Farah Najib"</span></div>
+        </div>
+
+        <div style="height:10px;"></div>
+
+        <div style="display:flex; align-items:center;">
+          <div class="prompt">farah@host:~$</div>
+          <div><span class="type skills">echo "Software Developer"</span></div>
+        </div>
+
+      </div>
+    </div>
+  </foreignObject>
 </svg>
