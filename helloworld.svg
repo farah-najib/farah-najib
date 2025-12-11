@@ -96,7 +96,7 @@
 
         <div style="display:flex; align-items:center;">
           <div class="prompt">farah@host:~$</div>
-          <div><span class="type skills">echo "Software Developer"</span></div>
+          <div><span class="type skills">echo "Software Engineer"</span></div>
         </div>
 
       </div>
