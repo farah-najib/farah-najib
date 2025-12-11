@@ -1,8 +1,8 @@
 <div align="center">
 	<br>
-	<a href="https://github.com/farah-najib/farah-najib/blob/master/helloworld.svg">
+	<a href="https://github.com/farah-najib/farah-najib/blob/master/svgImage.svg">
 		<picture>
-		  <source media="(min-width: 720px)" srcset="helloworld.svg">
+		  <source media="(min-width: 720px)" srcset="svgImage.svg">
 		  <img src="header-mobile.svg" width="800" height="400" alt="Click to see the source">
 		</picture>
 	</a>
